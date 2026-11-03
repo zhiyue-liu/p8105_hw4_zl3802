@@ -1,0 +1,21 @@
+---
+title: "Home"
+author: "Zhiyue Liu"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About Me
+
+Hello! My name is Zhiyue Liu. I am currently pursuing a master's degree in Biostatistics at Columbia University, focusing on the Data Science track.
+
+I graduated from the University of California, Davis, with a bachelor's degree in Applied Statistics.
+
+I have gained professional experience through management consulting internships at PwC and IQVIA.
+
+I am interested in data science, statistical analysis, and management consulting. I enjoy using data to understand problems and support decision-making.
+
+This website provides an overview of my academic background and professional experience.

@@ -1,0 +1,19 @@
+name: "p8105_hw4_zl3802"
+output_dir: "docs"
+
+navbar:
+  title: "Zhiyue Liu"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+  right:
+    - text: "GitHub"
+      href: https://github.com/zhiyue-liu
+    - text: "Email"
+      href: mailto:zl3802@cumc.columbia.edu
+    - text: "LinkedIn"
+      href: https://www.linkedin.com/in/zhiyue-liu-2857bb2ba
+
+output: html_document

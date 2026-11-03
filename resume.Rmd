@@ -1,0 +1,43 @@
+---
+title: "Resume"
+author: "Zhiyue Liu"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Education
+
+**Columbia University**  
+M.S. in Biostatistics, Data Science Track
+
+**University of California, Davis**  
+B.S. in Applied Statistics
+
+## Professional Experience
+
+### PwC
+
+**Management Consulting Intern**
+
+- Conducted market research and analyzed companies in the industrial equipment industry.
+- Compared different companies based on their products, technologies, and business performance.
+- Assisted with research and PowerPoint presentations.
+
+### IQVIA
+
+**Management Consulting Intern**
+
+- Conducted research on healthcare and clinical data.
+- Assisted with data mapping and analysis.
+- Supported consulting projects through data research and PowerPoint presentations.
+
+## Skills
+
+- R and Python
+- Data Analysis
+- Data Visualization
+- Market Research
+- Microsoft Excel and PowerPoint

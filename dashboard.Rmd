@@ -1,0 +1,79 @@
+---
+title: "Instacart Dashboard"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+knitr::opts_chunk$set(echo = FALSE)
+
+data("instacart")
+
+set.seed(8105)
+
+instacart_sample = instacart |>
+  slice_sample(n = 10000)
+```
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Products by Department (Bar Plot)
+
+```{r}
+department_counts = instacart_sample |>
+  count(department)
+
+bar_plot = department_counts |>
+  ggplot(aes(x = reorder(department, n), y = n)) +
+  geom_col(fill = "grey60") +
+  coord_flip() +
+  labs(
+    x = "Department",
+    y = "Number of Products"
+  )
+
+ggplotly(bar_plot)
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Reorder Rate by Hour (Scatterplot)
+
+```{r}
+reorder_by_hour = instacart_sample |>
+  group_by(order_hour_of_day) |>
+  summarize(reorder_rate = mean(reordered, na.rm = TRUE))
+
+scatter_plot = reorder_by_hour |>
+  ggplot(aes(x = order_hour_of_day, y = reorder_rate)) +
+  geom_point() +
+  labs(
+    x = "Hour of Day",
+    y = "Proportion Reordered"
+  )
+
+ggplotly(scatter_plot)
+```
+
+### Add-to-Cart Position by Department (Boxplot)
+
+```{r}
+box_plot = instacart_sample |>
+  filter(department %in% c("produce", "dairy eggs", "snacks", "beverages")) |>
+  ggplot(aes(x = department, y = add_to_cart_order)) +
+  geom_boxplot(fill = "grey80") +
+  labs(
+    x = "Department",
+    y = "Position Added to Cart"
+  )
+
+ggplotly(box_plot)
+```

@@ -8,6 +8,8 @@ navbar:
       href: index.html
     - text: "Resume"
       href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
   right:
     - text: "GitHub"
       href: https://github.com/zhiyue-liu
